@@ -57,8 +57,7 @@ export default function App() {
           position: 'top-right',
           isClosable: true,
         })
-        // console.log(err.response)
-        console.log()
+        console.log(err.response)
       })
   }
   const onChange = (e: any) => {
