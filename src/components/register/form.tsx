@@ -21,9 +21,11 @@ import { Logo } from './Logo'
 import { OAuthButtonGroup } from './OAuthButtonGroup'
 import { PasswordField } from './PasswordField'
 import axios from 'axios'
+/* tslint:disable */
 export default function App() {
   const handleClick = () => {
     console.log(inputs)
+    // @ts-ignore
     if (inputs.password === inputs.confirmPassword) {
       axios
         .post('/api/v1/auth/register', inputs)
@@ -98,7 +100,8 @@ export default function App() {
                 />
               </FormControl>
               <PasswordField {...{ onChange }} />
-              <PasswordField confirm={'true'} {...{ onChange }} />
+
+              <PasswordField {...{ onChange, confirm: true }} />
             </Stack>
             <HStack justify="space-between">
               <Checkbox defaultIsChecked>Remember me</Checkbox>
