@@ -1,7 +1,6 @@
 import { RootState } from 'store'
 import { loadUser } from './../utils/localStorage'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import user from 'pages/api/v1/auth/user'
 import { removeCookie } from 'components/Storage/cookies'
 
 export type userType = {
